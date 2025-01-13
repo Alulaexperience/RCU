@@ -1,3 +1,6 @@
+# Example endpoint
+endpoint_url = "https://www.RCU.gov.sa/data/submit"
+ 
 # Simulated complex configuration data
 config_data = {
     "transaction_id": "abc123xyz456",
@@ -9,3 +12,10 @@ config_data = {
         }
     }
 }
+ 
+# Send POST request
+response = requests.post(endpoint_url, json=config_data)
+ 
+# Print response (for testing purposes only)
+print("Status Code:", response.status_code)
+print("Response Body:", response.text)
